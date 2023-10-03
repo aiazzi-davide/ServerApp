@@ -12,10 +12,10 @@ public class ServerStr
     BufferedReader inDalClient;
     DataOutputStream outVersoClient;
 
-    public Socket attendi() {
+    public Socket attendi(int port) {
         try {
             System.out.println("SERVER partito in esecuzione ...");
-            server = new ServerSocket(3000);
+            server = new ServerSocket(port);
             client = server.accept();
             server.close();
 
